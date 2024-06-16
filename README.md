@@ -1,12 +1,6 @@
-# react-starter
+# react-chat
 
-🚀 React starter
-
-## 使用说明
-
-```sh
-npx degit tlyboy/react-starter my-new-project
-```
+🤖 React Chat
 
 ## 使用许可
 

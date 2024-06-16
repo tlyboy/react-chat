@@ -11,7 +11,7 @@ function NavBar({ className }: { className?: string }) {
 
       <a
         className="icon-btn i-carbon-logo-github"
-        href="https://github.com/tlyboy/react-starter"
+        href="https://github.com/tlyboy/react-chat"
         target="_blank"
         rel="noopener noreferrer"
         title="GitHub"

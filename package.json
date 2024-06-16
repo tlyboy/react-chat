@@ -1,5 +1,5 @@
 {
-  "name": "react-starter",
+  "name": "react-chat",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -11,7 +11,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.2",
     "classnames": "^2.5.1",
+    "destr": "^2.0.3",
+    "markdown-it": "^14.1.0",
     "nprogress": "^0.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -21,6 +24,8 @@
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.8.1",
     "@iconify-json/carbon": "^1.1.35",
+    "@shikijs/markdown-it": "^1.6.5",
+    "@types/markdown-it": "^14.1.1",
     "@types/node": "^20.14.2",
     "@types/nprogress": "^0.2.3",
     "@types/react": "^18.3.3",
@@ -35,6 +40,7 @@
     "postcss": "^8.4.38",
     "prettier": "^3.3.1",
     "prettier-plugin-tailwindcss": "^0.5.14",
+    "shiki": "^1.6.5",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.4.5",
     "unplugin-auto-import": "^0.17.6",

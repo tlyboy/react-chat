@@ -58,4 +58,22 @@ html.dark {
   .icon-btn {
     @apply inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:text-[#3498db] hover:opacity-100;
   }
+
+  .inp {
+    @apply w-[250px] rounded border border-gray-200 bg-transparent px-4 py-2 text-center outline-none active:outline-none dark:border-gray-700;
+  }
+}
+
+html.dark .shiki,
+html.dark .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  /* 可选，用于定义字体样式 */
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
+}
+
+.shiki {
+  overflow: auto;
 }
