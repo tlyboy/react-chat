@@ -5,14 +5,14 @@ import { destr } from 'destr'
 
 const md = markdownit()
 
-md.use(
-  await Shiki({
-    themes: {
-      light: 'vitesse-light',
-      dark: 'vitesse-dark',
-    },
-  }),
-)
+Shiki({
+  themes: {
+    light: 'vitesse-light',
+    dark: 'vitesse-dark',
+  },
+}).then((shiki) => {
+  md.use(shiki)
+})
 
 function Index() {
   const [url, setUrl] = useState('http://localhost:11434/api/generate')
