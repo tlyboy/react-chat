@@ -3,10 +3,6 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "destination": "https://frpc.tlyboy.com/api/:match*",
-      "source": "/api/:match*"
-    },
-    {
       "destination": "/index.html",
       "source": "/(.*)"
     }

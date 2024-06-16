@@ -15,7 +15,7 @@ Shiki({
 })
 
 function Index() {
-  const [url, setUrl] = useState('/api/generate')
+  const [url, setUrl] = useState('http://localhost:11434/api/generate')
   const [disabled, setDisabled] = useState(false)
   const [prompt, setPrompt] = useState('')
   const [response, setResponse] = useState('')
