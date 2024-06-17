@@ -69,7 +69,7 @@ function Index() {
       }
     } catch (error) {
       console.error(error)
-      alert('暂不支持')
+      alert(JSON.stringify(error, null, 2))
     } finally {
       setDisabled(false)
     }
