@@ -96,7 +96,7 @@ function Index() {
       </div>
 
       <div
-        className="whitespace-pre-wrap break-words"
+        className="prose dark:prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: response }}
       />
 

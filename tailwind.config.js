@@ -1,4 +1,5 @@
 import { iconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons'
+import typography from '@tailwindcss/typography'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -12,5 +13,6 @@ export default {
       collections: getIconCollections(['carbon']),
       scale: 1.2,
     }),
+    typography,
   ],
 }
