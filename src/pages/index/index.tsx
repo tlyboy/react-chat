@@ -56,9 +56,9 @@ function Index() {
         done = readDone
 
         if (value) {
-          result += destr<{ response: string }>(
-            textDecoder.decode(value),
-          ).response
+          result +=
+            destr<{ response: string }>(textDecoder.decode(value)).response ||
+            ''
 
           const rendered = md.render(result)
 
