@@ -10,7 +10,7 @@ md.use(mila, {
   matcher: (link: string) => /^https?:\/\//.test(link),
   attrs: {
     target: '_blank',
-    rel: 'noopener noreferrer',
+    rel: 'noopener',
   },
 })
 
