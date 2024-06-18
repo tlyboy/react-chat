@@ -110,14 +110,14 @@ function Index() {
         <NavBar />
       </header>
 
-      <main className="py-[60px]">
+      <main className="pb-[100px] pt-[60px]">
         <div
           className="prose max-w-none p-[20px] dark:prose-invert"
           dangerouslySetInnerHTML={{ __html: response }}
         />
       </main>
 
-      <footer className="fixed bottom-0 left-0 z-[999] flex h-[60px] w-full flex-col items-center justify-center bg-white px-[20px] shadow dark:bg-black">
+      <footer className="fixed bottom-0 left-0 z-[999] flex h-[100px] w-full flex-col items-center  bg-white p-[20px] shadow dark:bg-black">
         <form className="flex w-full gap-2" onSubmit={handleSend}>
           <textarea
             className="inp flex-1 resize-none text-left"
