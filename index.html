@@ -20,7 +20,7 @@
         const setting = localStorage.getItem('color-schema') || 'auto'
         if (setting === 'dark' || (prefersDark && setting !== 'light')) {
           document.documentElement.classList.toggle('dark', true)
-          document.getElementById('theme-color').content = '#121212'
+          document.getElementById('theme-color').content = '#000000'
         }
       })()
     </script>
