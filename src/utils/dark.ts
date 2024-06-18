@@ -13,6 +13,9 @@ export const isDark = {
         : 'light'
 
     document.documentElement.classList.toggle('dark', v)
+    document
+      .querySelector('#theme-color')
+      ?.setAttribute('content', v ? '#121212' : '#ffffff')
 
     if (systemValue === modeVal) {
       localStorage.setItem('color-schema', 'auto')
