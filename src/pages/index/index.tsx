@@ -1,7 +1,6 @@
 import markdownit from 'markdown-it'
 import mila from 'markdown-it-link-attributes'
 import Shiki from '@shikijs/markdown-it'
-import axios from 'axios'
 import { destr } from 'destr'
 
 const md = markdownit()
@@ -41,19 +40,18 @@ function Index() {
     setPrompt('')
 
     try {
-      const res = await axios.post(
-        url,
-        {
+      const res = await fetch(url, {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           model,
           prompt,
-        },
-        {
-          adapter: 'fetch',
-          responseType: 'stream',
-        },
-      )
+        }),
+      })
 
-      const reader = res.data.getReader()
+      const reader = res.body!.getReader()
       const textDecoder = new TextDecoder()
 
       let result = ''
