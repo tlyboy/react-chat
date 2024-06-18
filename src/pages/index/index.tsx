@@ -23,8 +23,10 @@ Shiki({
 })
 
 function Index() {
-  const [model, setModel] = useState('qwen2')
-  const [url, setUrl] = useState('http://localhost:11434/api/generate')
+  const [model, setModel] = useState(localStorage.getItem('model') || 'qwen2')
+  const [url, setUrl] = useState(
+    localStorage.getItem('url') || 'http://localhost:11434/api/generate',
+  )
   const [disabled, setDisabled] = useState(false)
   const [prompt, setPrompt] = useState('')
   const [response, setResponse] = useState('')
@@ -76,7 +78,7 @@ function Index() {
       }
     } catch (error) {
       console.error(error)
-      alert(JSON.stringify(error, null, 2))
+      alert('发送失败')
     } finally {
       setDisabled(false)
     }
@@ -89,13 +91,19 @@ function Index() {
           <input
             className="inp w-1/3"
             value={model}
-            onChange={(event) => setModel(event.target.value)}
+            onChange={(event) => {
+              setModel(event.target.value)
+              localStorage.setItem('model', event.target.value)
+            }}
           />
 
           <input
             className="inp w-2/3"
             value={url}
-            onChange={(event) => setUrl(event.target.value)}
+            onChange={(event) => {
+              setUrl(event.target.value)
+              localStorage.setItem('url', event.target.value)
+            }}
           />
         </div>
 
