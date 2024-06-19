@@ -115,6 +115,8 @@ function Index() {
       </header>
 
       <main className="py-[60px]">
+        <div className="safe-area-top"></div>
+
         <div
           className="prose max-w-none p-[20px] dark:prose-invert"
           dangerouslySetInnerHTML={{ __html: response }}
