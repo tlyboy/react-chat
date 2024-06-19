@@ -1,16 +1,5 @@
 {
   "buildCommand": "pnpm run build",
-  "headers": [
-    {
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/manifest+json"
-        }
-      ],
-      "source": "/manifest.webmanifest"
-    }
-  ],
   "outputDirectory": "dist",
   "rewrites": [
     {
