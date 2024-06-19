@@ -86,28 +86,32 @@ function Index() {
 
   return (
     <section className="h-full text-gray-700 dark:text-gray-200">
-      <header className="fixed left-0 top-0 z-[999] flex h-[60px] w-full items-center gap-4 bg-white px-[20px] shadow dark:bg-black">
-        <div className="flex flex-1 gap-2">
-          <input
-            className="inp w-1/3"
-            value={model}
-            onChange={(event) => {
-              setModel(event.target.value)
-              localStorage.setItem('model', event.target.value)
-            }}
-          />
+      <header className="fixed left-0 top-0 z-[999] w-full bg-white px-[20px] shadow dark:bg-black">
+        <div className="safe-area-top"></div>
 
-          <input
-            className="inp w-2/3"
-            value={url}
-            onChange={(event) => {
-              setUrl(event.target.value)
-              localStorage.setItem('url', event.target.value)
-            }}
-          />
+        <div className="flex h-[60px] items-center gap-4">
+          <div className="flex flex-1 gap-2">
+            <input
+              className="inp w-1/3"
+              value={model}
+              onChange={(event) => {
+                setModel(event.target.value)
+                localStorage.setItem('model', event.target.value)
+              }}
+            />
+
+            <input
+              className="inp w-2/3"
+              value={url}
+              onChange={(event) => {
+                setUrl(event.target.value)
+                localStorage.setItem('url', event.target.value)
+              }}
+            />
+          </div>
+
+          <NavBar />
         </div>
-
-        <NavBar />
       </header>
 
       <main className="py-[60px]">
