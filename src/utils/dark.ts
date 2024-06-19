@@ -13,9 +13,6 @@ export const isDark = {
         : 'light'
 
     document.documentElement.classList.toggle('dark', v)
-    document
-      .querySelector('#theme-color')
-      ?.setAttribute('content', v ? '#000000' : '#ffffff')
 
     if (systemValue === modeVal) {
       localStorage.setItem('color-schema', 'auto')
@@ -33,6 +30,9 @@ export function toggleDark(event: React.MouseEvent) {
 
   if (!isAppearanceTransition) {
     isDark.value = !isDark.value
+    document
+      .querySelector('#theme-color')
+      ?.setAttribute('content', isDark.value ? '#000000' : '#ffffff')
     return
   }
 
@@ -45,6 +45,9 @@ export function toggleDark(event: React.MouseEvent) {
 
   const transition = document.startViewTransition(() => {
     isDark.value = !isDark.value
+    document
+      .querySelector('#theme-color')
+      ?.setAttribute('content', isDark.value ? '#000000' : '#ffffff')
   })
   transition.ready.then(() => {
     const clipPath = [
